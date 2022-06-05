@@ -14,25 +14,58 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Code {
+  width: 60vh;
+  height: 30vh;
+  font-size: 1.5vh;
+  padding: 1vh;
+  background-color: #eeeeee;
+  outline: none;
+  resize: vertical;
+}
+
+.Output {
+  width: 60vh;
+  height: 10vh;
+  font-size: 1.5vh;
+  padding: 1vh;
+  border-top: 0;
+  background-color: #fffadb;
+  outline: none;
+  cursor: default;
+  resize: vertical;
+}
+
+.Examples {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  padding: 0.5vh;
+  font-size: 2vh;
+}
+
+.Run {
+  background-color: #3574fd;
+  border: none;
+  padding: 1vh 1.5vh;
+  font-size: 2vh;
+  font-weight: bold;
+  color: white;
+  border-radius: 1vh;
+  cursor: pointer;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
 }
