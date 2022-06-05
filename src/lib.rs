@@ -2,6 +2,8 @@ mod utils;
 
 use wasm_bindgen::prelude::*;
 
+use lox_lib::run;
+
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
 #[cfg(feature = "wee_alloc")]
@@ -9,11 +11,14 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
+extern "C" {
     fn alert(s: &str);
 }
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, lox-wasm!");
+pub fn run_code(code: &str) -> String {
+    match run(code) {
+        Ok(val) => val,
+        Err(e) => "Error: ".to_string() + &e.to_string(),
+    }
 }
