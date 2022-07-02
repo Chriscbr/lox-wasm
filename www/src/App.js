@@ -24,6 +24,7 @@ function App() {
   };
 
   const runCode = () => {
+    setOutput("");
     init().then(() => {
       setOutput(run_code(code));
     })
@@ -47,16 +48,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Lox</h1>
-        <textarea className="Code" value={code} onChange={handleCodeChange}></textarea>
-        <textarea className="Output" value={output} readOnly></textarea>
-        <select className="Examples" onChange={handleExampleChange}>
-          <option value="helloworld">Hello, World!</option>
-          <option value="fibonacci">Fibonacci</option>
-          <option value="empty">Empty</option>
-        </select>
-        <button className="Run" onClick={() => runCode(code)}>Run</button>
-        <a className="github-button" href="https://github.com/Chriscbr/lox-wasm" data-size="large" data-show-count="true" aria-label="Star Chriscbr/lox-wasm on GitHub">Star</a>
       </header>
+      <textarea className="Code" value={code} onChange={handleCodeChange}></textarea>
+      <textarea className="Output" value={output} readOnly></textarea>
+      <select className="Examples" onChange={handleExampleChange}>
+        <option value="helloworld">Hello, World!</option>
+        <option value="fibonacci">Fibonacci</option>
+        <option value="empty">Empty</option>
+      </select>
+      <button className="Run" onClick={() => runCode(code)}>Run</button>
+      <a className="github-button" href="https://github.com/Chriscbr/lox-wasm" data-size="large" data-show-count="true" aria-label="Star Chriscbr/lox-wasm on GitHub">Star</a>
     </div>
   );
 }

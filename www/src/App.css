@@ -1,27 +1,17 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #ffffff;
-  min-height: 100vh;
+  min-height: 100vmin;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 6vmin;
   color: black;
+}
+
+.App-header > h1 {
+  margin: 5vmin;
 }
 
 .App-link {
@@ -29,20 +19,20 @@
 }
 
 .Code {
-  width: 60vh;
-  height: 30vh;
-  font-size: 1.5vh;
-  padding: 1vh;
+  width: 80vmin;
+  height: 30vmin;
+  font-size: 2.5vmin;
+  padding: 1vmin;
   background-color: #eeeeee;
   outline: none;
   resize: vertical;
 }
 
 .Output {
-  width: 60vh;
-  height: 10vh;
-  font-size: 1.5vh;
-  padding: 1vh;
+  width: 80vmin;
+  height: 10vmin;
+  font-size: 2.5vmin;
+  padding: 1vmin;
   border-top: 0;
   background-color: #fffadb;
   outline: none;
@@ -51,21 +41,21 @@
 }
 
 .Examples {
-  margin-top: 2vh;
-  margin-bottom: 1vh;
-  padding: 0.5vh;
-  font-size: 2vh;
+  margin-top: 2vmin;
+  margin-bottom: 1vmin;
+  padding: 0.5vmin;
+  font-size: 2vmin;
 }
 
 .Run {
   background-color: #3574fd;
   border: none;
-  padding: 1vh 1.5vh;
-  font-size: 2vh;
+  padding: 1vmin 1.5vmin;
+  font-size: 2vmin;
   font-weight: bold;
   color: white;
-  border-radius: 1vh;
+  border-radius: 1vmin;
   cursor: pointer;
-  margin-top: 1vh;
-  margin-bottom: 2vh;
+  margin-top: 1vmin;
+  margin-bottom: 2vmin;
 }
