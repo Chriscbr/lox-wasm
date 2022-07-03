@@ -6,14 +6,25 @@ const helloworld = `// You can edit this code!
 // Click here and start typing.
 
 print "Hello world!";`
-const fibonacci = `var a = 0;
-var temp;
+const fibonacci = `fun fib() {
+  var a = 0;
+  var b = 1;
 
-for (var b = 1; a < 10000; b = temp + b) {
-  print a;
-  temp = a;
-  a = b;
-}`;
+  fun inner() {
+    var temp = a;
+    a = b;
+    b = temp + b;
+    return a;
+  }
+
+  return inner;
+}
+
+var f = fib();
+for (var i = 0; i < 20; i = i + 1) {
+  print f();
+}
+`;
 
 function App() {
   const [code, setCode] = useState(helloworld);
