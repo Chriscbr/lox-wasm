@@ -1,69 +1,37 @@
-<div align="center">
+# lox-wasm
 
-  <h1><code>wasm-pack-template</code></h1>
+A lox interpreter that you can run in your browser through wasm!
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+Try it out at https://rybicki.io/lox-wasm/.
 
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
+The interpreter is written at Rust at https://github.com/Chriscbr/lox-rust.
 
-  <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
-    <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
-  </h3>
+Little to no optimization has been done to reduce bundle sizes or improve performance.
 
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
-</div>
+## Build instructions
 
-## About
+Make sure https://github.com/Chriscbr/lox-rust is checked out and built in an adjacent directory.
 
-[**📚 Read this template tutorial! 📚**][template-docs]
+Install [wasm-pack](https://github.com/rustwasm/wasm-pack).
 
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
-
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
-
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
-
-## 🚴 Usage
-
-### 🐑 Use `cargo generate` to Clone this Template
-
-[Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
+From this repo, run:
 
 ```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
-cd my-project
+wasm-pack build --target web
 ```
 
-### 🛠️ Build with `wasm-pack build`
+to package the library into an npm package which can be used by the web application.
+
+Test out the web application by running:
 
 ```
-wasm-pack build
+cd www
+npm run start
 ```
 
-### 🔬 Test in Headless Browsers with `wasm-pack test`
+Publish the web application to GitHub by running:
 
 ```
-wasm-pack test --headless --firefox
+cd www
+npm run deploy
 ```
-
-### 🎁 Publish to NPM with `wasm-pack publish`
-
-```
-wasm-pack publish
-```
-
-## 🔋 Batteries Included
-
-* [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
-  between WebAssembly and JavaScript.
-* [`console_error_panic_hook`](https://github.com/rustwasm/console_error_panic_hook)
-  for logging panic messages to the developer console.
-* [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
-  for small code size.
