@@ -1,10 +1,10 @@
 # lox-wasm
 
-A lox interpreter that you can run in your browser through wasm!
+A lox interpreter that you can run in your browser through WebAssembly!
 
 Try it out at https://rybicki.io/lox-wasm/.
 
-The interpreter is written at Rust at https://github.com/Chriscbr/lox-rust.
+The Lox interpreter is natively written at Rust at https://github.com/Chriscbr/lox-rust. This repository contains necessary setup to package the code and bundle it into a small web application.
 
 Little to no optimization has been done to reduce bundle sizes or improve performance.
 
