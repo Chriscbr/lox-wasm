@@ -50,6 +50,9 @@ function App() {
       case "fibonacci":
         setCode(fibonacci);
         break;
+      case "empty":
+        setCode("");
+        break;
       default:
         break;
     }
