@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/lox-wasm/static/css/main.c33199e4.css",
-    "main.js": "/lox-wasm/static/js/main.fef70512.js",
-    "static/media/lox_wasm_bg.wasm": "/lox-wasm/static/media/lox_wasm_bg.b3c3190e19bc8ee1ba37.wasm",
+    "main.js": "/lox-wasm/static/js/main.e4ffec5d.js",
+    "static/media/lox_wasm_bg.wasm": "/lox-wasm/static/media/lox_wasm_bg.ee2e50d3dbe1664288ed.wasm",
     "index.html": "/lox-wasm/index.html",
     "main.c33199e4.css.map": "/lox-wasm/static/css/main.c33199e4.css.map",
-    "main.fef70512.js.map": "/lox-wasm/static/js/main.fef70512.js.map"
+    "main.e4ffec5d.js.map": "/lox-wasm/static/js/main.e4ffec5d.js.map"
   },
   "entrypoints": [
     "static/css/main.c33199e4.css",
-    "static/js/main.fef70512.js"
+    "static/js/main.e4ffec5d.js"
   ]
 }
